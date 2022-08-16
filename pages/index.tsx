@@ -1,8 +1,9 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
-import WalletContextProvider from '../components/WalletContextProvider'
 import { AppBar } from '../components/AppBar'
 import { TodoForm } from '../components/TodoForm'
+import { TodoList } from '../components/TodoList'
+import WalletContextProvider from '../components/WalletContextProvider'
 
 import styles from '../styles/Home.module.css'
 
@@ -20,6 +21,7 @@ const Home: NextPage = (props) => {
         <AppBar />
         <div className={styles.AppBody}>
           <TodoForm></TodoForm>
+          <TodoList></TodoList>
         </div>
       </WalletContextProvider >
     </div>
