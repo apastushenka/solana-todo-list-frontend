@@ -3,7 +3,7 @@ import * as web3 from '@solana/web3.js'
 import { useEffect, useState } from 'react'
 import { TodoCounter } from '../models/TodoCounter'
 import { TODO_PROGRAM_ID } from '../utils/constants'
-import { Todo } from './Todo'
+import { TodoItem } from './TodoItem'
 
 export const TodoList = () => {
     const { connection } = useConnection();
@@ -37,7 +37,7 @@ export const TodoList = () => {
 
     const todos = []
     for (let i = 0; i < count; i++) {
-        todos.push(<Todo key={i} index={i}></Todo>)
+        todos.push(<TodoItem key={i} index={i}></TodoItem>)
     }
 
     return (
